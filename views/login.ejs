@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <form method="post" action="/login">  <!-- we should specify the action method here to display url or it gets sets to default localhost url --> 
+        <h1>Login Now</h1>
+       
+
+        <label for="email">Email:</label>
+        <input type="email"  name="email" placeholder="Enter your email" value="<%= locals.email %>">
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="Password" />
+
+        <p class="error"> <%= locals.message %> </p>
+
+        <button type="submit">Log In</button>
+    </form>
+
+    
+</body>
+</html>
